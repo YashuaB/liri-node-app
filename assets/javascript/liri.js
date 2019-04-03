@@ -14,6 +14,7 @@ function userPick(option, search) {
 
   userRequest = option
   userInput = search
+
   if (userRequest === "concert-this") {
 
     func.findConcert(userInput)
@@ -22,8 +23,8 @@ function userPick(option, search) {
 
     func.findMovie(userInput) 
 
-  } else if (option === "spotify-this-song") {
-
+  } else if (userRequest === "spotify-this-song") {
+   
     func.findSong(userInput)
 
 

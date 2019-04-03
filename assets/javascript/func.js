@@ -11,8 +11,13 @@ function findSong(nameOfSong){
     secret:  process.env.SPOTIFY_SECRET
   });
 
+  if(!nameOfSong){
+    nameOfSong = "the sign ace of base"
+  }
+  
+
   spotify
-    .search({ type: 'track', query: nameOfSong, limit: 5 })
+    .search({ type: 'track', query: nameOfSong, limit: 15 })
     .then(function (response) {
 
       
@@ -26,7 +31,7 @@ function findSong(nameOfSong){
        -------------------------------------------
        Artist Name:${response.tracks.items[0].artists[0].name}`)
 
-    
+    // console.log(response.tracks.items)
 
 })
 }
@@ -38,6 +43,10 @@ function findMovie(nameOfMovie){
   // });
 
   var movie = process.env.MOVIE_ID
+
+  if(!nameOfMovie){
+    nameOfMovie = "Mr. Nobody"
+  }
   
   var queryUrl = "http://www.omdbapi.com/?t=" + nameOfMovie + "&y=&plot=short&apikey=" + movie + ""
   axios.get(queryUrl).then(
@@ -73,6 +82,7 @@ function findMovie(nameOfMovie){
     function(response){
 
       time = response.data[0].datetime
+      
      // concert = JSON.parse(response.data)
       console.log(`
             Venue:  ${response.data[0].venue.name}
