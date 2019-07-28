@@ -26,4 +26,4 @@ Gets random text inside a file and does what it says:
 node liri.js do-what-it-says
 
 
-Link to video of [liri app] (https://drive.google.com/file/d/1eflUM8ISjF1z8k-quQZP8L637XioOd8b/view?usp=sharing)
+Link to video of ![liri app] (https://drive.google.com/file/d/1eflUM8ISjF1z8k-quQZP8L637XioOd8b/view?usp=sharing)
